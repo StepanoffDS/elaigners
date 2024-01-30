@@ -13,14 +13,14 @@ function getDoctorPopup() {
 			if (btn.dataset.doctorId === '1') {
 				doctorName.innerHTML = 'Каракашьян Анна Андреевна'
 				doctorImg.innerHTML = `
-				<img src="./img/our-doctors/doctor-01@1x.png" srcset='./img/our-doctors/doctor-01@2x.png 2x' alt="Каракашьян Анна Андреевна">
+				<img src="./img/our-doctors/doctor-01@1x.png" alt="Каракашьян Анна Андреевна">
 				`
 				doctorDesc.innerHTML = `Специализация - ортодонтическое лечение. Лечение на брекет-системе взрослых и детей. Лечение на элайнерах (сертифицированный специалист с 2014 года). Лечение детей на детских элайнерах. Ортодонтическое лечение с применением микроимплантов.`
 			}
 			if (btn.dataset.doctorId === '2') {
 				doctorName.innerHTML = 'Лемехова Антонина Викторовна'
 				doctorImg.innerHTML = `
-				<img src="./img/our-doctors/doctor-02@1x.png" srcset='./img/our-doctors/doctor-02@2x.png 2x' alt="Лемехова Антонина Викторовна">
+				<img src="./img/our-doctors/doctor-02@1x.png" alt="Лемехова Антонина Викторовна">
 				`
 				doctorDesc.innerHTML = `Антонина Викторовна владеет современными диагностическими и практическими навыками, необходимыми при ортодонтическом лечении. Специализируется на лечении взрослых и детей с применением съемных и несъемных ортодонтических аппаратов, исправлении прикуса с использованием брекет-систем и элайнеров.`
 			}
