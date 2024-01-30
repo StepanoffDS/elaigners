@@ -1,0 +1,16 @@
+.special-offer {
+	padding: 50px 0 100px;
+	background: var(--Light-blue, #eff3fc);
+}
+
+@include mediaTablet {
+	.special-offer {
+		padding: 50px 0 90px;
+	}
+}
+
+@include mediaExtraMobile {
+	.special-offer {
+		padding: 40px 0;
+	}
+}

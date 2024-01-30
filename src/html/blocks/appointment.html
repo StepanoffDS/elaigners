@@ -1,0 +1,61 @@
+<div class="appointment-wrapper none" id="appointment-wrapper">
+  <section class="appointment" id="appointment">
+    <div class="appointment__btn-close" id="appointmentBtnClose">
+      <img src="./img/icons/close.svg" alt="close">
+    </div>
+    <h3 class="appointment__title">Записаться на приём</h3>
+    <form action="#" class="form-appointment__form" id="formAppointment">
+      <div class="form-appointment__item form-appointment__item--required">
+        <input data-required="true" type="text" id="appointmentFormName" name="appointmentFormName" class="form-appointment__input form-appointment__input--required" placeholder="Имя*">
+      </div>
+      <div class="form-appointment__item form-appointment__item--email">
+        <input data-email="true" data-reg="" type="text" id="appointmentFormEmail" name="appointmentFormEmail" class="form-appointment__input" placeholder="E-mail">
+      </div>
+      <div class="form-appointment__item form-appointment__item--required">
+        <input data-required="true" data-tel-length="18" data-tel-input data-correct-tel="true" type="text" id="appointmentFormPhone" name="appointmentFormPhone" class="form-appointment__input form-appointment__input--required" placeholder="+7 (___) ___ - __ - __*">
+      </div>
+      <div class="form-appointment__item form-appointment__item-select">
+        <select name="appointmentFormDoctorName" id="appointmentFormDoctorName" class="form-appointment__selectDoctor">
+          <option value="0">Выберите врача</option>
+          <option value="Каракашьян Анна Андреевна, стоматолог-ортодонт">Каракашьян Анна Андреевна, стоматолог-ортодонт</option>
+          <option value="Лемехова Антонина Викторовна, стоматолог-ортодонт">Лемехова Антонина Викторовна, стоматолог-ортодонт</option>
+        </select>
+      </div>
+      <div class="form-appointment__item form-appointment__item-date">
+        <input type="text" id="appointmentFormDate" class="form-appointment__input-date" placeholder="Выберите дату" name="appointmentFormDate">
+      </div>
+      <div class="form-appointment__item form-appointment__item-time">
+        <h4 class=""></h4>
+        <input type="text" id="appointmentFormTime" class="form-appointment__item-title" name="appointmentFormTime" placeholder="Выберите время">
+        <div class="form-appointment__block-time">
+          <input type="button" value="8:00 - 9:00" class="form-appointment__input-time">
+          <input type="button" value="9:00 - 10:00" class="form-appointment__input-time">
+          <input type="button" value="10:00 - 11:00" class="form-appointment__input-time">
+          <input type="button" value="11:00 - 12:00" class="form-appointment__input-time">
+          <input type="button" value="12:00 - 13:00" class="form-appointment__input-time">
+          <input type="button" value="13:00 - 14:00" class="form-appointment__input-time">
+          <input type="button" value="14:00 - 15:00" class="form-appointment__input-time">
+          <input type="button" value="15:00 - 16:00" class="form-appointment__input-time">
+          <input type="button" value="17:00 - 18:00" class="form-appointment__input-time">
+          <input type="button" value="18:00 - 19:00" class="form-appointment__input-time">
+        </div>
+      </div>
+      <div class="form-appointment__item">
+        <textarea name="appointmentFormMessage" id="appointmentFormMessage" cols="30" rows="10" class="form-appointment__input form-appointment__input--textarea" placeholder="Комментарий"></textarea>
+      </div>
+      <button type="submit" class="form-appointment__btn button-1" id="formAppointmentBtn">Записаться на прием</button>
+      <div class="form-appointment__descr">
+        <p>Нажимая кнопку «Записаться на приём», вы соглашаетесь с <a href="./privacy-policy.html">условиями обработки персональных данных</a></p>
+      </div>
+    </form>
+  </section>
+</div>
+<section class='appointment-successful none' id="appointmentSuccessful">
+  <div class="appointment-successful__btn-close" id="appointmentSuccessfulBtnClose">
+    <img src="./img/icons/close.svg" alt="close">
+  </div>
+  <div class="appointment-successful__text">
+    <h3 class="appointment-successful__title">Ваша заявка отправлена!</h3>
+    <p class="appointment-successful__descr">С Вами свяжется администратор для подтверждения записи.</p>
+  </div>
+</section>

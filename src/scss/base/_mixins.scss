@@ -1,0 +1,40 @@
+@mixin mediaLaptop {
+	@media (max-width: 1150px) {
+		@content;
+	}
+}
+
+@mixin mediaTablet {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin mediaMobile {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+
+@mixin mediaExtraMobile {
+	@media (max-width: 790px) {
+		@content;
+	}
+}
+
+@mixin mediaMiniMobile {
+	@media (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin retina-bg($image) {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image: $image;
+	}
+}
+
+@mixin sectionUp($padding) {
+	padding-top: calc($padding + var(--heightOfHeader));
+	margin-top: calc(-1 * var(--heightOfHeader));
+}

@@ -1,0 +1,39 @@
+.bread-crumbs {
+	margin-top: 30px;
+
+	padding-top: 204px;
+
+	@include mediaLaptop {
+		padding-top: 200px;
+	}
+
+	@include mediaTablet {
+		padding-top: 69px;
+	}
+}
+
+.bread-crumbs__list {
+	display: flex;
+	gap: 10px;
+
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+	/* 22.4px */
+	flex-wrap: wrap;
+}
+
+.bread-crumbs__item {
+	display: flex;
+	gap: 10px;
+}
+
+.bread-crumbs__item-text {
+	a {
+		color: var(--Text-Black, #1b1a1a);
+	}
+}
+
+.bread-crumbs__divider {
+}

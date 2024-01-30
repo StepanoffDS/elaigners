@@ -1,0 +1,385 @@
+.solution-problem {
+	padding: 100px 0;
+	background-color: var(--White, #fcfeff);
+}
+
+.solution-problem__inner {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.solution-problem__main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.solution-problem__text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 595px;
+}
+
+.solution-problem__title {
+	color: var(--Blue, #5d7dda);
+	line-height: 140%; /* 49px */
+}
+
+.solution-problem__desc {
+	color: var(--Black, #171717);
+	font-size: 23px;
+	font-weight: 600;
+	line-height: 140%; /* 32.2px */
+}
+
+.solution-problem__info {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.solution-problem__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 291px;
+	width: 100%;
+	padding: 14px 45px;
+	border-radius: 40px;
+	background: var(--Blue, #5d7dda);
+	color: var(--White, #fcfeff);
+	font-size: 19px;
+	font-weight: 500;
+
+	transition: opacity 0.1s linear;
+
+	&:hover {
+		opacity: 0.85;
+	}
+}
+
+.solution-problem__question {
+	p {
+		margin-top: 10px;
+	}
+}
+
+.solution-problem__link {
+	display: flex;
+	align-items: center;
+	color: var(--Blue, #5d7dda);
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: underline !important;
+	transition: opacity 0.1s linear;
+
+	span {
+		display: flex;
+		align-items: center;
+	}
+
+	&:hover {
+		opacity: 0.85;
+	}
+
+	svg {
+		margin-left: 13px;
+		margin-right: 5px;
+		overflow: visible;
+	}
+}
+
+.solution-problem__cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 14px;
+	color: var(--Blue, #5d7dda);
+}
+
+.solution-problem__card {
+	padding: 30px 20px;
+	border-radius: 10px;
+	background: var(--Light-blue, #eff3fc);
+}
+
+.solution-problem__card--full {
+	display: flex;
+	justify-content: space-between;
+	grid-column: 1/3;
+
+	& .solution-problem__card-desc {
+		max-width: 528px;
+	}
+}
+
+.solution-problem__card-desc {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 140%; /* 25.2px */
+	padding-left: 44px;
+
+	b {
+		font-weight: 600;
+	}
+
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 0;
+		width: 28px;
+		height: 35px;
+		background-image: url(./../img/icons/mark-bold.svg);
+		background-size: 28px 35px;
+	}
+}
+
+.solution-problem__card-param {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	flex-shrink: 0;
+	max-width: 508px;
+	width: 100%;
+}
+
+.solution-problem__card-param-title {
+	font-variant-numeric: lining-nums proportional-nums;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.solution-problem__card-param-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.solution-problem__card-param-item {
+	line-height: 140%; /* 22.4px */
+	display: flex;
+
+	&::before {
+		flex-shrink: 0;
+		content: '';
+		width: 10px;
+		height: 10px;
+		margin-right: 14px;
+		margin-top: 6px;
+		background-color: var(--Blue, #5d7dda);
+		border-radius: 50%;
+	}
+}
+
+@include mediaTablet {
+	.solution-problem {
+		padding: 90px 0 calc(90px + 90px);
+	}
+
+	.solution-problem__inner {
+		position: relative;
+		gap: 30px;
+	}
+
+	.solution-problem__info {
+		position: absolute;
+		bottom: -30px;
+		transform: translateY(100%);
+		left: 0;
+		display: grid;
+		grid-template-columns: 227px 228px auto;
+		grid-template-rows: 1fr;
+	}
+
+	.solution-problem__question {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		p {
+			font-size: 14px;
+			width: 200px;
+		}
+	}
+
+	.solution-problem__btn {
+		width: 100%;
+		padding: 14px 29px;
+		font-size: 16px;
+		&--appointment {
+			grid-column: 2/3;
+			align-self: start;
+		}
+	}
+
+	.solution-problem__link {
+		grid-column: 3/4;
+		align-self: start;
+	}
+
+	.solution-problem__text {
+		gap: 6px;
+	}
+
+	.solution-problem__desc {
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.solution-problem__cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.solution-problem__card--full {
+		grid-column: 1/2;
+		flex-direction: column;
+		gap: 11px;
+
+		.solution-problem__card-desc {
+			max-width: none;
+			font-size: 18px;
+		}
+	}
+
+	.solution-problem__card-param {
+		padding-left: 44px;
+		max-width: none;
+	}
+
+	.solution-problem__card-desc {
+		font-size: 16px;
+	}
+}
+
+@include mediaExtraMobile {
+	.solution-problem {
+		padding: 40px 0 calc(190px + 40px);
+		@include sectionUp(40px);
+		position: relative;
+		z-index: 1;
+	}
+
+	.solution-problem__card-desc::before {
+		background-image: url(./../img/icons/mark-bold-bold.svg);
+	}
+
+	.solution-problem__link {
+		font-size: 18px;
+	}
+
+	.solution-problem__info {
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+		column-gap: 10px;
+	}
+
+	.solution-problem__btn--appointment {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.solution-problem__question {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+}
+
+@media (max-width: 540px) {
+	.solution-problem__link {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		svg {
+			margin-left: 0;
+		}
+	}
+}
+
+@include mediaMiniMobile {
+	.solution-problem {
+		padding: 40px 0 calc(190px + 40px);
+		@include sectionUp(40px);
+	}
+
+	.solution-problem__info {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 18px;
+		width: 100%;
+		max-width: 320px;
+		left: 50%;
+		transform: translateX(-50%) translateY(100%);
+		bottom: -20px;
+	}
+	.solution-problem__btn {
+		max-width: none;
+	}
+	.solution-problem__question {
+		margin: 0 auto;
+		width: 100%;
+		p {
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+	.solution-problem__link {
+		grid-row: 3/4;
+		grid-column: 1/2;
+		flex-direction: row;
+		align-items: center;
+
+		svg {
+			margin-left: 13px;
+		}
+	}
+
+	.solution-problem__desc {
+		font-size: 16px;
+	}
+
+	.solution-problem__text {
+		gap: 16px;
+	}
+
+	.solution-problem__inner {
+		gap: 20px;
+	}
+
+	.solution-problem__card {
+		padding: 30px 10px;
+	}
+
+	.solution-problem__card--full .solution-problem__card-desc {
+		font-size: 16px;
+	}
+
+	.solution-problem__card-param {
+		padding-left: 0;
+	}
+
+	.solution-problem__card-param-title {
+		font-size: 16px;
+	}
+
+	.solution-problem__card-param-item {
+		font-size: 14px;
+	}
+
+	.solution-problem__card-param-item::before {
+		margin-right: 8px;
+	}
+
+	.solution-problem__card-desc {
+		padding-left: 25px;
+	}
+
+	.solution-problem__card-desc::before {
+		width: 19px;
+		height: 23px;
+		background-size: 19px 23px;
+		background-repeat: no-repeat;
+	}
+}

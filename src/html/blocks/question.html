@@ -1,0 +1,35 @@
+<div class="question-wrapper none">
+  <section class="question" id="question">
+    <div class="question__btn-close" id="questionBtnClose">
+      <img src="./img/icons/close.svg" alt="close">
+    </div>
+    <h3 class="question__title">Задать вопрос врачу</h3>
+    <form action="#" class="form-question__form" id="questionForm">
+      <div class="form-question__item form-question__item--required">
+        <input data-required="true" type="text" id="questionFormName" name="questionFormName" class="form-question__input" placeholder="Имя*">
+      </div>
+      <div class="form-question__item form-question__item--email">
+        <input data-email="true" data-reg="" type="text" id="questionFormEmail" name="questionFormEmail" class="form-question__input" placeholder="E-mail">
+      </div>
+      <div class="form-question__item form-question__item--required">
+        <input data-required="true" data-tel-length="18" data-correct-tel="true" data-tel-input type="text" id="questionFormPhone" name="questionFormPhone" class="form-question__input" placeholder="+7 (___) ___ - __ - __*">
+      </div>
+      <div class="form-question__item">
+        <textarea name="questionFormMessage" id="questionFormMessage" cols="30" rows="10" class="form-question__input form-question__input--textarea" placeholder="Ваш вопрос"></textarea>
+      </div>
+      <button type="submit" class="form-question__btn button-1" id="formQuestionBtn">Отправить вопрос</button>
+      <div class="form-question__descr">
+        <p>Нажимая кнопку «Отправить вопрос», вы соглашаетесь с <a href="./privacy-policy.html">условиями обработки персональных данных</a></p>
+      </div>
+    </form>
+  </section>
+</div>
+<section class='question-successful none' id="questionSuccessful">
+  <div class="question-successful__btn-close" id="questionSuccessfulBtnClose">
+    <img src="./img/icons/close.svg" alt="close">
+  </div>
+  <div class="question-successful__text">
+    <h3 class="question-successful__title">Ваш вопрос отправлен!</h3>
+    <p class="question-successful__descr">Мы свяжемся с вами в ближайшее время.</p>
+  </div>
+</section>

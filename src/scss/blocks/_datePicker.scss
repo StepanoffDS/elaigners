@@ -1,0 +1,99 @@
+.air-datepicker {
+	width: 100% !important;
+	border: none !important;
+	font-family: var(--font-main) !important;
+	padding: 14px 16px !important;
+	box-sizing: border-box !important;
+}
+
+.air-datepicker-nav--action {
+	background-image: url('./../img/icons/arrow-up.svg') !important;
+	background-position: center center !important; // x y
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	width: 28px !important;
+	height: 28px !important;
+
+	&[data-action='prev'] {
+		transform: rotate(180deg) !important;
+	}
+
+	// &[data-action='next'] {
+	// 	transform: rotate(-90deg) !important;
+	// }
+
+	svg {
+		display: none !important;
+	}
+}
+
+.air-datepicker-nav--title {
+	color: var(--text-color) !important;
+	text-align: center !important;
+	font-size: 16px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 120% !important;
+	/* 19.2px */
+}
+
+.air-datepicker-body--day-name {
+	color: var(--text-color) !important;
+	text-align: center !important;
+	font-size: 16px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 120% !important;
+	text-transform: lowercase !important;
+	/* 19.2px */
+}
+
+.air-datepicker--content {
+	padding: 0 !important;
+}
+
+.air-datepicker-nav {
+	border: none !important;
+}
+
+.air-datepicker-body--cells {
+	gap: 2px !important;
+	grid-auto-rows: auto !important;
+}
+
+.air-datepicker-cell {
+	font-size: 16px !important;
+	font-style: normal !important;
+	font-weight: 500 !important;
+	line-height: 120% !important;
+	border-radius: 5px !important;
+	background: var(--Gray-2, #f1f1f1) !important;
+	color: var(--Gray-3, #8e8c8c) !important;
+	aspect-ratio: 1/1 !important;
+	/* 19.2px */
+
+	&.-selected-.-focus- {
+		background-color: var(--Light-blue, #eff3fc) !important;
+		color: var(--color-active) !important;
+	}
+
+	&.-selected- {
+		background-color: var(--Light-blue, #eff3fc) !important;
+		color: var(--color-active) !important;
+	}
+
+	&.-other-month- {
+		opacity: 0;
+		pointer-events: none !important;
+	}
+
+	&.-disabled- {
+		background: var(--Light-gray, #fcfcfc) !important;
+		color: var(--Gray, #c4c2c2) !important;
+		pointer-events: none;
+	}
+
+	@include mediaExtraMobile {
+		font-size: 14px !important;
+	}
+}

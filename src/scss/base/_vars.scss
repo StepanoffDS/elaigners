@@ -1,0 +1,45 @@
+:root {
+	--container-width: 1150px;
+	--container-padding: 20px;
+
+	--font-main: 'Inter', sans-serif;
+	// --font-accent: 'Playfair Display', serif;
+
+	--White: #fcfeff;
+	--Black: #171717;
+	--Text-Black: #1b1a1a;
+	--Blue: #5d7dda;
+	--Light-blue: #eff3fc;
+	--Light-blue-2: #e1e9ff;
+	--Light-gray: #fcfcfc;
+	--Gray: #dbdbdb;
+	--Gray-2: #f1f1f1;
+	--Gray-3: #8e8c8c;
+	--color-error: #eb5757;
+
+	--image-comparison-slider-width: 602px;
+	--image-comparison-slider-handle-width: 40px;
+	--image-comparison-slider-width-teeth-popup: 791px;
+	--image-comparison-slider-handle-width-teeth-popup: 80px;
+
+	--heightOfHeader: 67px;
+
+	@include mediaLaptop {
+		--image-comparison-slider-width: 500px;
+	}
+
+	@include mediaTablet {
+		--container-width: 808px;
+		--image-comparison-slider-width-teeth-popup: 560px;
+	}
+
+	@include mediaExtraMobile {
+		--image-comparison-slider-width: 460px;
+		--image-comparison-slider-width-teeth-popup: 460px;
+	}
+
+	@include mediaMiniMobile {
+		--image-comparison-slider-width: 320px;
+		--image-comparison-slider-width-teeth-popup: 310px;
+	}
+}

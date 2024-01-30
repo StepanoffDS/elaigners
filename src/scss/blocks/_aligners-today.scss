@@ -1,0 +1,76 @@
+.aligners-today {
+	padding: 100px 0;
+	background-color: var(--White, #fcfeff);
+}
+.container {
+}
+.aligners-today__inner {
+}
+.aligners-today__text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 30px 20px;
+	border-radius: 10px 10px 0px 0px;
+	background: var(--Light-blue, #eff3fc);
+}
+.aligners-today__title {
+	color: var(--Blue, #5d7dda);
+	line-height: 140%; /* 49px */
+}
+
+.aligners-today__subtitle {
+	color: var(--Blue, #5d7dda);
+	font-size: 23px;
+	font-weight: 600;
+	line-height: 140%; /* 32.2px */
+	text-transform: none;
+}
+
+.aligners-today__desc {
+	font-weight: 400;
+	line-height: 140%; /* 22.4px */
+
+	b {
+		font-weight: 600;
+	}
+}
+
+.aligners-today__img {
+	border-radius: 0px 0px 10px 10px;
+}
+
+@include mediaTablet {
+	.aligners-today {
+		padding: 90px 0;
+	}
+	.aligners-today__subtitle {
+		font-size: 18px;
+	}
+}
+
+@include mediaExtraMobile {
+	.aligners-today {
+		padding: 40px 0;
+		@include sectionUp(40px);
+		position: relative;
+		z-index: 3;
+	}
+
+	.aligners-today__img {
+		min-height: 291px;
+		object-fit: cover;
+	}
+
+	.aligners-today__text {
+		gap: 16px;
+	}
+
+	.aligners-today__desc {
+		margin-top: 9px;
+	}
+
+	.aligners-today__subtitle {
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,64 @@
+.doctors-popup {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	z-index: 199;
+	padding: 0 15px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.doctors-popup__inner {
+	position: sticky;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px;
+	background-color: var(--Light-blue, #eff3fc);
+	border-radius: 10px;
+	z-index: 10;
+	max-width: 500px;
+	margin: 0 auto;
+
+	@include mediaMobile {
+		padding: 20px;
+	}
+
+	@include mediaExtraMobile {
+		width: 100%;
+	}
+}
+
+.doctors-popup__close {
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.doctors-popup__img {
+	border-radius: 5px;
+	overflow: hidden;
+	img {
+		max-height: 539px;
+		width: 100%;
+		object-fit: cover;
+		object-position: top;
+	}
+}
+
+.doctors-popup__name {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 140%; /* 25.2px */
+}
+
+.doctors-popup__desc {
+	font-size: 17px;
+	line-height: 140%; /* 23.8px */
+}
+
+@include mediaMiniMobile {
+	.doctors-popup__desc {
+		font-size: 16px;
+	}
+}
