@@ -6,7 +6,7 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background-image: url(./../img/during-treatment/during-treatment-bg@1x.png);
+		background-image: url(./../img/during-treatment/during-treatment-bg1x.png);
 		z-index: -1;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -93,7 +93,7 @@
 		padding: 90px 0;
 
 		&::before {
-			background-image: url(./../img/during-treatment/during-treatment-bg-tab@1x.png);
+			background-image: url(./../img/during-treatment/during-treatment-bg-tab1x.png);
 			background-position: center;
 		}
 	}
@@ -149,7 +149,7 @@
 @include mediaMiniMobile {
 	.during-treatment {
 		&::before {
-			background-image: url(./../img/during-treatment/during-treatment-bg-mob@1x.png);
+			background-image: url(./../img/during-treatment/during-treatment-bg-mob1x.png);
 			background-position: clamp(-3.125rem, -8.75rem + 25vw, -0.938rem)
 				clamp(-18.75rem, -28.393rem + 42.86vw, -15rem); // -50(360) -15(500) || -300(360) -240(500)
 			background-size: cover;

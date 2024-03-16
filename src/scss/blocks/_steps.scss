@@ -47,6 +47,7 @@
 
 	&.swiper-button-disabled {
 		background: var(--Gray-2, #f1f1f1);
+		border-color: var(--Gray-2, #f1f1f1);
 		path {
 			fill: var(--Gray-3, #8e8c8c);
 		}

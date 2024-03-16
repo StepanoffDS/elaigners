@@ -1,9 +1,17 @@
 .discover {
 	position: relative;
 	z-index: 1;
-	@include mediaMobile {
+	@include mediaLaptop {
 		.container-right {
 			padding-left: 20px;
+		}
+	}
+
+	@include mediaTablet {
+		.container-right {
+			padding-left: calc(
+				(100% - var(--container-width)) / 2 + var(--container-padding)
+			);
 		}
 	}
 	padding-top: 203px;
@@ -34,49 +42,63 @@
 	margin-top: 32px;
 	position: relative;
 
-	@media (max-width: 539px) {
-		// max-width: 400px !important;
-	}
+	b {
+		position: relative;
+		&::before {
+			--width: 390px;
+			--height: 80px;
+			content: '';
+			position: absolute;
+			bottom: -19px;
+			right: -24px;
+			width: var(--width);
+			height: var(--height);
+			background-image: url('./../img/discover/title-decor.svg');
+			background-position: center center; // x y
+			background-size: var(--width) var(--height);
+			background-repeat: no-repeat;
 
-	&::before {
-		--width: 400px;
-		--height: 80px;
-		content: '';
-		position: absolute;
-		bottom: -21px;
-		right: 31px;
-		width: var(--width);
-		height: var(--height);
-		background-image: url('./../img/discover/title-decor.svg');
-		background-position: center center; // x y
-		background-size: var(--width) var(--height);
-		background-repeat: no-repeat;
+			@include mediaLaptop {
+				--width: 325px;
+				--height: 51px;
+				bottom: -14px;
+				right: -47px;
+			}
 
-		@include mediaLaptop {
-			--width: 325px;
-			--height: 51px;
-			bottom: -13px;
-			right: 56px;
-		}
+			@include mediaTablet {
+				--width: 257px;
+				--height: 51px;
+				bottom: -13px;
+				right: -13px;
+			}
 
-		@include mediaTablet {
-			--width: 257px;
-			--height: 51px;
-			bottom: -13px;
-			right: 23px;
-		}
+			@include mediaMobile {
+				bottom: -14px;
+				right: -12px;
+			}
 
-		@include mediaMobile {
-			bottom: -14px;
-			right: 144px;
-		}
+			@media (max-width: 615px) {
+				right: 248px;
+			}
 
-		@media (max-width: 539px) {
-			--width: 225px;
-			--height: 46px;
-			bottom: -13px;
-			right: auto;
-			left: 88px;
+			@media (max-width: 536px) {
+				right: -13px;
+			}
+
+			@include mediaMiniMobile {
+				--width: 227px;
+				--height: 43px;
+				right: 208px;
+				bottom: -9px;
+			}
+
+			@media (max-width: 471px) {
+				right: -17px;
+			}
+
+			@media (max-width: 371px) {
+				right: 36px;
+			}
 		}
 	}
 }
@@ -219,14 +241,6 @@
 	position: relative;
 	width: 100%;
 	display: block;
-	// background: #2a2a2a;
-	// background-color: #999;
-	// background-image: url('./../img/discover/video-prev@1x.png');
-	// background-position: center center; // x y
-	// background-size: cover;
-	// background-repeat: no-repeat;
-
-	// @include retina-bg(url(./../img/discover/video-prev@2x.png));
 
 	height: clamp(
 		30.625rem,
@@ -234,25 +248,7 @@
 		42.375rem
 	); // 550px(900) 678px(1920)
 	min-height: 0;
-
-	// &::before {
-	// 	content: '';
-	// 	background: rgba(16, 16, 16, 0.6);
-	// 	backdrop-filter: blur(2px);
-	// 	position: absolute;
-	// 	left: 0;
-	// 	top: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// }
 }
-
-// .discover__video-link-play {
-// 	position: absolute;
-// 	left: 50%;
-// 	top: 50%;
-// 	transform: translate(-50%, -50%);
-// }
 
 @include mediaLaptop {
 	.discover__text {
@@ -328,6 +324,10 @@
 	.discover__link {
 		font-size: 18px;
 	}
+
+	.discover__benefits-list {
+		gap: 30px;
+	}
 }
 
 @include mediaMobile {
@@ -349,7 +349,7 @@
 
 	.discover__title {
 		margin-top: 0;
-		max-width: 503px;
+		// max-width: 503px;
 	}
 
 	.discover__benefits {
@@ -359,16 +359,29 @@
 
 	.discover__btns {
 		max-width: none;
+		column-gap: 20px;
+		row-gap: 0;
+		display: grid;
+		grid-template-columns: 227px 228px auto;
 		gap: 20px;
+		align-items: start;
 	}
 
 	.discover__btn {
-		max-width: 320px;
 		width: 100%;
+		padding: 14px 20px;
+		font-size: 16px;
 	}
 
 	.discover__question {
 		gap: 13px;
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.discover__appointment {
+		grid-column: 2/3;
+		grid-row: 1/2;
 	}
 
 	.discover__video-link {
@@ -387,19 +400,51 @@
 		}
 		&--mob {
 			display: inline-flex;
+			grid-column: 3/4;
+			margin-top: 0px;
+			font-size: 16px;
 		}
-	}
-}
-
-@include mediaTablet {
-	.discover__benefits-list {
-		gap: 30px;
 	}
 }
 
 @include mediaExtraMobile {
 	.discover__video-link {
 		height: clamp(17.188rem, 9.6rem + 33.72vw, 26.25rem);
+	}
+
+	.discover__btns {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 0;
+	}
+
+	.discover__appointment {
+		grid-column: 1/2;
+	}
+
+	.discover__question {
+		grid-column: 2/3;
+	}
+
+	.discover__link--mob {
+		grid-column: 1/3;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 580px) {
+	.discover__btns {
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 20px;
+	}
+
+	.discover__question {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	.discover__link--mob {
+		margin-top: 0;
+		grid-column: 1/2;
 	}
 }
 
@@ -418,5 +463,9 @@
 
 	.discover__title {
 		font-size: 26px;
+	}
+
+	.discover__btn {
+		max-width: none;
 	}
 }

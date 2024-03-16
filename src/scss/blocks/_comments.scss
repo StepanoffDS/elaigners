@@ -4,7 +4,6 @@
 	background-position: center center; // x y
 	background-size: cover;
 	background-repeat: no-repeat;
-	@include retina-bg(url(./../img/comments/comments-bg@2x.png));
 }
 
 .comments__inner {
@@ -125,7 +124,6 @@
 
 	.comments__card-desc {
 		margin-bottom: 21px;
-		-webkit-line-clamp: 6;
 	}
 }
 
@@ -192,5 +190,6 @@
 @include mediaMiniMobile {
 	.comments__card-desc {
 		font-size: 14px;
+		-webkit-link-clamp: 5;
 	}
 }

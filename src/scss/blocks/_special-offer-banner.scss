@@ -53,10 +53,14 @@
 .special-offer-banner__cases {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 28px;
+	// display: grid;
+	// grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-bottom: 20px;
 }
 
 .special-offer-banner__case {
+	max-width: 330px;
 }
 
 .special-offer-banner__case-title {
@@ -64,7 +68,7 @@
 	font-size: 18px;
 	font-weight: 600;
 	text-transform: uppercase;
-	padding-bottom: 7px;
+	padding-bottom: 3px;
 	margin-bottom: 5px;
 	border-bottom: 1px solid #b5b5b5;
 }
@@ -91,6 +95,17 @@
 	b {
 		font-weight: 400;
 	}
+}
+
+.special-offer-banner__case-desc {
+	font-family: var(--font-main);
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 160%;
+	color: var(--black);
+	display: block;
+	margin-top: 14px;
+	max-width: 333px;
 }
 
 .special-offer-banner__attention {
@@ -175,7 +190,8 @@
 	}
 
 	.special-offer-banner__title {
-		margin-bottom: 30px;
+		margin-bottom: 26px;
+		padding-left: 30px;
 		flex-direction: column;
 		align-items: flex-start;
 
@@ -185,16 +201,26 @@
 	}
 
 	.special-offer-banner__desc {
-		padding-left: 28px;
+		padding-left: 30px;
 	}
 
 	.special-offer-banner__cases {
 		flex-direction: column;
-		padding-left: 28px;
+		padding-left: 30px;
+		gap: 14px;
+	}
+
+	.special-offer-banner__case {
+		max-width: none;
 	}
 
 	.special-offer-banner__case-benefit {
 		flex-direction: row;
+		margin-top: 12px;
+	}
+
+	.special-offer-banner__case-desc {
+		margin-top: 7px;
 	}
 
 	.special-offer-banner__attention {

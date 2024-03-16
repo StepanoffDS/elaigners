@@ -276,8 +276,39 @@
 		padding: 20px 10px;
 	}
 
+	.who__main-text {
+		max-width: none;
+	}
+
+	.who__desc {
+		position: relative;
+		z-index: 1;
+	}
+
+	.who__p {
+		margin-bottom: 30px;
+	}
+
 	.who__contr-btns {
-		grid-template-columns: 208px auto;
+		grid-template-columns: 1fr 1fr;
+		gap: 18px;
+	}
+
+	.who__contr-btn {
+		max-width: none;
+		padding: 14px 20px;
+	}
+
+	.who__contr-p {
+		max-width: none;
+	}
+
+	.who__contr-desc {
+		max-width: none;
+	}
+
+	.who__contr-question p {
+		max-width: none;
 	}
 
 	.who__contr-link {
@@ -288,6 +319,27 @@
 		svg {
 			margin-left: 13px;
 		}
+	}
+}
+
+@media (max-width: 670px) {
+	.who__desc {
+		max-width: none;
+	}
+}
+
+@media (max-width: 580px) {
+	.who__contr-btns {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.who__contr-btn--appointment {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.who__contr-question {
+		grid-row: 2/3;
 	}
 }
 

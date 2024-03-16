@@ -17,7 +17,7 @@
 }
 
 @mixin mediaExtraMobile {
-	@media (max-width: 790px) {
+	@media (max-width: 808px) {
 		@content;
 	}
 }

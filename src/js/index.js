@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	try {
-		phoneMask
+		phoneMask()
 	} catch (e) {
 		console.error(e)
 	}
